@@ -3,86 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Eventos</title>
-    <style>
-        /* Estilos CSS podem ser adicionados aqui */
-    </style>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js" defer></script>
+    <title>Picnic Realizações</title>
 </head>
 <body>
-    <h1>Agendamento de Eventos</h1>
-    <form id="evento-form">
-        <label for="nome">Nome:</label>
+  <header class="header">
+    <a href="./index.html">
+      <img src="./" alt="Logo do site"
+    /></a>
+    <button id="menuBtn" class="menu-btn">&#9776;</button>
+    <nav id="menu" class="nav">
+      <ul class="ul">
+        <li class="li">
+        <a href="./dicas.html"
+          >Conheça nossas dicas</a
+        >
+      </li>
+        <li>
+          <a href="./depoimentos.html"
+            >Veja alguns depoimentos</a
+          >
+        </li>
+        <li>
+          <a href="./saibaMais.html"
+            >Saiba mais</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Bem vindo ao grupo!
+      Preencha o formulário e contribuia com a nossa organização</h1>
+
+<section>
+  <h2>Lista de Participantes e Contribuições</h2>
+  <table id="participantes-table">
+      <thead>
+          <tr>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th>Quantidade de Pessoas</th>
+              <th>Horário</th>
+              <th>Comida</th>
+              <th>Bebida</th>
+              <th>Atividades/Entretenimento</th>
+          </tr>
+      </thead>
+      <tbody id="tabela-corpo">
+          <!-- Aqui serão adicionadas as linhas dinamicamente -->
+      </tbody>
+  </table>
+</section>
+
+    <section class="cadastro-section">
+      <form id="evento-form">
+        <label for="nome">Escreva aqui o seu nome:</label>
         <input type="text" id="nome" name="nome" required><br><br>
 
-        <label for="telefone">Telefone de Contato:</label>
+        <label for="telefone">Coloque um número de telefone para contato:</label>
         <input type="tel" id="telefone" name="telefone" required><br><br>
 
-        <label for="quantidade">Quantidade de Pessoas:</label>
-        <input type="number" id="quantidade" name="quantidade" required><br><br>
+        <label for="quantidade">Quantas pessoas estarão com você?</label>
+        <div class="quantidade">
+            <select name="" id="quantidade" required>
+            <option value=""></option>
+            <option value="1">Somente eu</option>
+            <option value="2">Mais um</option>
+            <option value="3">Mais dois</option>
+            <option value="4">três ou mais</option>
+            </select>
+        </div><br><br>
 
-        <label for="comida">Comida a ser levada:</label>
+        <label for="horario">Que horas irá?</label>
+        <input type="time" id="horario" name="horario" min="00:01" max="23:59" required/><br><br>
+
+        <label for="comida">Coloque a comida que irá levar:</label>
         <input type="text" id="comida" name="comida"><br><br>
 
-        <label for="bebida">Bebida a ser levada:</label>
+        <label for="bebida">E qual bebida levará?</label>
         <input type="text" id="bebida" name="bebida"><br><br>
 
-        <label for="atividade">Atividades/Entretenimento:</label>
+        <label for="atividade">Que tipo de atividade pretende fazer?
+          Quem sabe tocar um violão, fazer um malabares, yoga, levar um jogo de tabuleiro ou talvez um carteado.</label>
         <textarea id="atividade" name="atividade"></textarea><br><br>
 
-        <button type="submit">Enviar</button>
+        <button class="btnEnviar" type="submit">Enviar formulário</button>
     </form>
+  </section>
 
-    <h2>Lista de Participantes e Contribuições</h2>
-    <table id="participantes-table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Quantidade de Pessoas</th>
-                <th>Comida</th>
-                <th>Bebida</th>
-                <th>Atividades/Entretenimento</th>
-            </tr>
-        </thead>
-        <tbody id="tabela-corpo">
-            <!-- Aqui serão adicionadas as linhas dinamicamente -->
-        </tbody>
-    </table>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('evento-form');
-            const tableBody = document.getElementById('tabela-corpo');
-
-            form.addEventListener('submit', function (event) {
-                event.preventDefault(); // Evita o envio padrão do formulário
-
-                // Obter os valores dos campos do formulário
-                const nome = document.getElementById('nome').value;
-                const telefone = document.getElementById('telefone').value;
-                const quantidade = document.getElementById('quantidade').value;
-                const comida = document.getElementById('comida').value;
-                const bebida = document.getElementById('bebida').value;
-                const atividade = document.getElementById('atividade').value;
-
-                // Criar uma nova linha na tabela
-                const newRow = document.createElement('tr');
-                newRow.innerHTML = `
-                    <td>${nome}</td>
-                    <td>${telefone}</td>
-                    <td>${quantidade}</td>
-                    <td>${comida}</td>
-                    <td>${bebida}</td>
-                    <td>${atividade}</td>
-                `;
-
-                // Adicionar a nova linha à tabela
-                tableBody.appendChild(newRow);
-
-                // Limpar os campos do formulário após adicionar à tabela
-                form.reset();
-            });
-        });
-    </script>
+ </main>
+ <footer>
+   <h3>Victor Moreira Realizações</p>
+   <a href="https://prozeducacao.com.br/" target="_blank"
+     ><img
+       src="./"
+       alt="Logo do site"
+   /></a>
+   <h3>Visite o repositório do site</p>
+   <a href="https://github.com/victoradmoreira/Picnic" target="_blank"
+     ><img
+       src="./"
+       alt="Ícone do repositório GitHub."
+   /></a>
+ </footer>
 </body>
 </html>

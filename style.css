@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ececec;
+  font-family: sans-serif;
+  color: #142d4c;
+  }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+  margin: 60px;
+  border: 2px solid #9fd3c7;
+  padding: 40px;
+}
+
+.nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 786px) {
+  .header {
+    height: 100%;
+    flex-direction: column;
+  }
+  .menu-btn {
+    display: block;
+    width: 20vw;
+    font-size: 30px;
+    border: none;
+    color: black;
+    padding: 4px;
+    cursor: pointer;
+  }
+  .nav {
+    display: none;
+  }
+  .ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+  }
+  #participantes-table {
+    display: flex;
+    width: auto;
+    margin: auto;
+    background-color: #9fd3c7;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+#participantes-table {
+  display: flex;
+  width: auto;
+  margin: auto;
+  background-color: #9fd3c7;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: auto;
+  background-color: #9fd3c7;
+}
+
+section {
+  margin: auto auto auto auto;
+  display: block;
+  justify-content: center;
+  width: auto;
+  padding: 40px;
+  font-size: 14px;
+  border: 2px solid #9fd3c7;
+  margin: 60px;
+}
+
+.cadastro-section {
+  margin: 60px;
+  padding: 0px;
+}
+
+#evento-form {
+  background-color: transparent;
+  padding: 50px;
+  border-radius: 15px;
+  margin: 50px 0;
+}
+
+#evento-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#evento-form input {
+  background-color: #e6ffe6;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #6b6e91;
+  color: black;
+}
+
+#evento-form div.quantidade {
+  background-color: #e6ffe6;
+  width: 101.5%;
+  color: black;
+}
+
+#evento-form div select#quantidade {
+  background-color: #e6ffe6;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #6b6e91;
+  color: black;
+}
+
+div.quantidade option {
+  background-color: #e6ffe6;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #6b6e91;
+  color: black;
+}
+
+#evento-form #atividade {
+  background-color: #e6ffe6;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #6b6e91;
+  color: black;
+}
+
+.btnEnviar {
+  display: inline-block;
+  background-color: #9fd3c7;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  line-height: 30px;
+  margin: 60px;
+  font-size: 14px;
+  border: 2px solid #9fd3c7;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px;
+  font-size: 22px;
+  border: 2px solid #9fd3c7;
+  margin: 60px;
+}
+
+h2 {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+}
